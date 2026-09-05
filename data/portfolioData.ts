@@ -131,6 +131,34 @@ export const projects: Project[] = [
     videoDemo: ""
   },
   {
+    id: "asktuto",
+    title: {
+      en: "AskTuto (Tutoring Marketplace Platform)",
+      es: "AskTuto (Plataforma Marketplace de Tutorías)"
+    },
+    role: {
+      en: "Lead Full Stack Developer",
+      es: "Desarrollador Full Stack Líder"
+    },
+    description: {
+      en: "Uber-style marketplace platform connecting educators and teachers with students for on-demand tutoring service bookings.",
+      es: "Plataforma tipo marketplace estilo Uber que conecta a profesores y maestros con alumnos para la contratación y reserva de servicios de tutoría bajo demanda."
+    },
+    longDescription: {
+      en: "An interactive peer-to-peer tutoring marketplace featuring a responsive landing page built with PHP and Bootstrap, powered by vanilla JavaScript for backend logic, API integrations, and real-time synchronization with Firebase databases.",
+      es: "Un marketplace interactivo de tutorías entre pares con una landing page responsiva construida en PHP y Bootstrap, impulsada por JavaScript puro para la lógica del backend, integraciones de APIs y sincronización en tiempo real con bases de datos en Firebase."
+    },
+    techStack: ["PHP", "JavaScript", "Firebase", "Bootstrap", "APIs"],
+    category: "Fullstack",
+    featured: true,
+    status: {
+      en: "Production Ready / Marketplace Platform",
+      es: "Listo para Producción / Plataforma Marketplace"
+    },
+    screenshots: ["/projects/asktuto/dashboard.png"],
+    videoDemo: ""
+  },
+  {
     id: "myp-contrataciones",
     title: {
       en: "M&P Contrataciones (Personnel Recruitment System)",

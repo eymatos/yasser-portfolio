@@ -1,7 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/data/portfolioData";
-import { Terminal, Layers, ShieldCheck, Video, Image as ImageIcon } from "lucide-react";
+import { Terminal, Layers, ShieldCheck, Video, Image as ImageIcon, Maximize2, X } from "lucide-react";
 import Image from "next/image";
 
 interface ProjectsSectionProps {
@@ -9,6 +10,8 @@ interface ProjectsSectionProps {
 }
 
 export default function ProjectsSection({ lang }: ProjectsSectionProps) {
+  const [selectedMedia, setSelectedMedia] = useState<{ type: 'image' | 'video'; url: string } | null>(null);
+
   return (
     <section id="projects" className="py-24 px-6 bg-slate-950 relative border-t border-slate-900">
       <div className="max-w-6xl mx-auto">
@@ -67,27 +70,39 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
                   {(project.longDescription ? project.longDescription[lang] : null) || project.description[lang]}
                 </p>
 
-                {/* Contenedor Multimedia / Preview (Renderizado Dinámico de Imágenes o Videos) */}
-                <div className="mb-6 rounded-xl bg-slate-950/60 border border-slate-800 overflow-hidden group-hover:border-slate-700 transition-all">
+                {/* Contenedor Multimedia / Preview */}
+                <div className="mb-6 rounded-xl bg-slate-950/80 border border-slate-800 overflow-hidden group-hover:border-slate-700 transition-all">
                   {project.screenshots && project.screenshots.length > 0 ? (
-                    <div className="relative w-full h-48 sm:h-56 bg-slate-900">
+                    <div 
+                      className="relative w-full h-64 sm:h-72 bg-slate-900 cursor-pointer overflow-hidden group/img"
+                      onClick={() => setSelectedMedia({ type: 'image', url: project.screenshots![0] })}
+                    >
                       <Image 
                         src={project.screenshots[0]} 
                         alt={project.title[lang]}
                         fill
-                        className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                        className="object-contain bg-slate-950 hover:scale-105 transition-transform duration-500 p-1"
                       />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs font-mono">
+                        <Maximize2 className="w-4 h-4" /> {lang === 'es' ? 'Ampliar imagen' : 'Expand image'}
+                      </div>
                     </div>
                   ) : project.videoDemo ? (
-                    <div className="relative w-full h-48 sm:h-56 bg-slate-900 flex items-center justify-center">
+                    <div className="relative w-full h-64 sm:h-72 bg-slate-900 flex items-center justify-center group/vid">
                       <video 
                         src={project.videoDemo} 
                         controls 
                         className="w-full h-full object-cover"
                       />
+                      <button 
+                        onClick={() => setSelectedMedia({ type: 'video', url: project.videoDemo! })}
+                        className="absolute top-3 right-3 bg-slate-900/80 hover:bg-slate-800 text-white p-2 rounded-lg text-xs font-mono flex items-center gap-1.5 opacity-0 group-hover/vid:opacity-100 transition-opacity border border-slate-700 shadow-lg"
+                      >
+                        <Maximize2 className="w-3.5 h-3.5" /> {lang === 'es' ? 'Expandir video' : 'Expand video'}
+                      </button>
                     </div>
                   ) : (
-                    <div className="p-4 flex flex-col items-center justify-center text-center gap-2">
+                    <div className="p-6 flex flex-col items-center justify-center text-center gap-2">
                       <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
                         <span className="flex items-center gap-1">
                           <ImageIcon className="w-4 h-4 text-blue-400" /> Gallery Ready
@@ -130,6 +145,49 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
         </div>
 
       </div>
+
+      {/* Modal Lightbox para Imágenes y Videos a Pantalla Completa */}
+      <AnimatePresence>
+        {selectedMedia && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
+            onClick={() => setSelectedMedia(null)}
+          >
+            <button 
+              className="absolute top-6 right-6 text-white bg-slate-800/80 hover:bg-slate-700 p-3 rounded-full transition-all z-10"
+              onClick={() => setSelectedMedia(null)}
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div 
+              className="relative w-full max-w-5xl h-[85vh] flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {selectedMedia.type === 'image' ? (
+                <div className="relative w-full h-full">
+                  <Image 
+                    src={selectedMedia.url} 
+                    alt="Vista ampliada del sistema"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ) : (
+                <video 
+                  src={selectedMedia.url} 
+                  controls 
+                  autoPlay
+                  className="w-full h-full object-contain rounded-xl shadow-2xl"
+                />
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
