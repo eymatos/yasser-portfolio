@@ -1,2 +1,0 @@
-# yasser-portfolio
-Portafolio personal
