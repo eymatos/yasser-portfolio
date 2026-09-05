@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { projects } from "@/data/portfolioData";
 import { Terminal, Layers, ShieldCheck, Video, Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
 
 interface ProjectsSectionProps {
   lang: 'en' | 'es';
@@ -66,22 +67,43 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
                   {(project.longDescription ? project.longDescription[lang] : null) || project.description[lang]}
                 </p>
 
-                {/* Contenedor Multimedia / Preview (Para Capturas o Videos) */}
-                <div className="mb-6 p-4 rounded-xl bg-slate-950/60 border border-slate-800 flex flex-col items-center justify-center text-center gap-2 group-hover:border-slate-700 transition-all">
-                  <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
-                    <span className="flex items-center gap-1">
-                      <ImageIcon className="w-4 h-4 text-blue-400" /> Gallery Ready
-                    </span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <Video className="w-4 h-4 text-indigo-400" /> Video Demo Supported
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-500">
-                    {lang === 'es' 
-                      ? 'Espacio preparado para previsualización multimedia o demostración en video del sistema.'
-                      : 'Space prepared for multimedia preview or video system demonstration.'}
-                  </p>
+                {/* Contenedor Multimedia / Preview (Renderizado Dinámico de Imágenes o Videos) */}
+                <div className="mb-6 rounded-xl bg-slate-950/60 border border-slate-800 overflow-hidden group-hover:border-slate-700 transition-all">
+                  {project.screenshots && project.screenshots.length > 0 ? (
+                    <div className="relative w-full h-48 sm:h-56 bg-slate-900">
+                      <Image 
+                        src={project.screenshots[0]} 
+                        alt={project.title[lang]}
+                        fill
+                        className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  ) : project.videoDemo ? (
+                    <div className="relative w-full h-48 sm:h-56 bg-slate-900 flex items-center justify-center">
+                      <video 
+                        src={project.videoDemo} 
+                        controls 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="p-4 flex flex-col items-center justify-center text-center gap-2">
+                      <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
+                        <span className="flex items-center gap-1">
+                          <ImageIcon className="w-4 h-4 text-blue-400" /> Gallery Ready
+                        </span>
+                        <span>•</span>
+                        <span className="flex items-center gap-1">
+                          <Video className="w-4 h-4 text-indigo-400" /> Video Demo Supported
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-500">
+                        {lang === 'es' 
+                          ? 'Espacio preparado para previsualización multimedia o demostración en video del sistema.'
+                          : 'Space prepared for multimedia preview or video system demonstration.'}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
 

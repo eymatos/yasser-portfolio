@@ -13,8 +13,8 @@ export const personalInfo: PersonalInfo = {
   },
   email: "esleidinmatos@gmail.com",
   phone: "+1-829-923-6320",
-  linkedin: "https://linkedin.com",
-  github: "https://github.com",
+  linkedin: "https://www.linkedin.com/in/esleidin-matos",
+  github: "https://github.com/eymatos",
   summary: {
     en: "Senior Systems Engineer with over 18 years of technical experience, specializing in the PHP ecosystem (Symfony/Laravel) and backend architecture. Expert in designing robust, scalable solutions using Domain-Driven Design (DDD), CQRS, and Microservices.",
     es: "Ingeniero en Sistemas con más de 18 años de experiencia técnica, especializado en el ecosistema PHP (Symfony/Laravel) y arquitectura backend. Experto en diseñar soluciones robustas y escalables utilizando Domain-Driven Design (DDD), CQRS y Microservicios."
@@ -120,40 +120,40 @@ export const projects: Project[] = [
       en: "Web platform designed to handle member registration, dissemination of educational resources, events management, and organizational transparency reports.",
       es: "Plataforma web diseñada para manejar el registro de miembros, divulgación de recursos educativos, gestión de eventos y reportes de transparencia organizacional."
     },
-    techStack: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+    techStack: ["WORDPRESS","PHP", "MySQL", "JavaScript", "Bootstrap"],
     category: "Fullstack",
     featured: true,
     status: {
       en: "Active Institutional Platform",
       es: "Plataforma Institucional Activa"
     },
-    screenshots: [],
+    screenshots: ["/projects/gisef/dashboard.png"],
     videoDemo: ""
   },
   {
-    id: "codeca",
+    id: "myp-contrataciones",
     title: {
-      en: "Codeca Enterprise Management System",
-      es: "Sistema de Gestión Empresarial Codeca"
+      en: "M&P Contrataciones (Personnel Recruitment System)",
+      es: "M&P Contrataciones (Sistema de Reclutamiento de Personal)"
     },
     role: {
       en: "Lead Full Stack Developer",
       es: "Desarrollador Full Stack Líder"
     },
     description: {
-      en: "Custom business management and administrative control platform developed for operational workflow automation.",
-      es: "Plataforma personalizada de gestión empresarial y control administrativo desarrollada para la automatización de flujos operativos."
+      en: "Specialized recruitment and human talent platform designed to streamline applicant tracking, evaluations, and hiring workflows.",
+      es: "Plataforma especializada de reclutamiento y talento humano diseñada para optimizar el seguimiento de aspirantes, evaluaciones y flujos de contratación."
     },
     longDescription: {
-      en: "Enterprise system designed to optimize internal processes, tracking modules, and transactional data management under robust backend standards.",
-      es: "Sistema empresarial diseñado para optimizar procesos internos, módulos de seguimiento y gestión de datos transaccionales bajo sólidos estándares de backend."
+      en: "Web application developed to manage candidate pipelines, resume indexing, interview scheduling, and evaluation tracking under clean MVC standards.",
+      es: "Aplicación web desarrollada para gestionar flujos de candidatos, indexación de currículums, programación de entrevistas y seguimiento de evaluaciones bajo estándares limpios de MVC."
     },
     techStack: ["PHP", "JavaScript", "MySQL", "Bootstrap", "jQuery"],
     category: "Fullstack",
     featured: true,
     status: {
-      en: "Legacy Architecture / Historical Project",
-      es: "Arquitectura Histórica / Proyecto Legado"
+      en: "Production System / Recruitment Platform",
+      es: "Sistema en Producción / Plataforma de Reclutamiento"
     },
     screenshots: [],
     videoDemo: ""
