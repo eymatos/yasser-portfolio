@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Asegura que las imágenes estáticas de la carpeta public se sirvan correctamente en Vercel
   images: {
-    unoptimized: true,
+    unoptimized: true, // Esto desactiva el optimizador y permite cualquier URL externa libremente
   },
 };
 
