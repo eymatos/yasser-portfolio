@@ -99,7 +99,7 @@ export const projects: Project[] = [
       en: "Conceptual AI Prototype / R&D",
       es: "Prototipo Conceptual de IA / I+D"
     },
-    screenshots: ["/projects/jurisai/dashboard.png","/projects/jurisai/hero.png"],
+    screenshots: ["/projects/jurisai/dashboard.png", "/projects/jurisai/hero.png"],
     videoDemo: ""
   },
   {
@@ -155,7 +155,16 @@ export const projects: Project[] = [
       en: "Production System / Recruitment Platform",
       es: "Sistema en Producción / Plataforma de Reclutamiento"
     },
-    screenshots: ["/projects/myp-contrataciones/dashboard.png","/projects/myp-contrataciones/hero.png","/projects/myp-contrataciones/hero2.png","/projects/myp-contrataciones/hero3.png","/projects/myp-contrataciones/hero4.png","/projects/myp-contrataciones/hero5.png","/projects/myp-contrataciones/hero6.png","/projects/myp-contrataciones/hero7.png"],
+    screenshots: [
+      "/projects/myp-contrataciones/dashboard.png",
+      "/projects/myp-contrataciones/hero.png",
+      "/projects/myp-contrataciones/hero2.png",
+      "/projects/myp-contrataciones/hero3.png",
+      "/projects/myp-contrataciones/hero4.png",
+      "/projects/myp-contrataciones/hero5.png",
+      "/projects/myp-contrataciones/hero6.png",
+      "/projects/myp-contrataciones/hero7.png"
+    ],
     videoDemo: ""
   },
   {
@@ -211,7 +220,14 @@ export const projects: Project[] = [
       en: "Active Institutional Platform / National Monitoring",
       es: "Plataforma Institucional Activa / Monitoreo Nacional"
     },
-    screenshots: ["/projects/sidip/dashboard.png","/projects/sidip/hero.png","/projects/sidip/hero2.png","/projects/sidip/hero3.png","/projects/sidip/hero4.png"]
+    screenshots: [
+      "/projects/sidip/dashboard.png",
+      "/projects/sidip/hero.png",
+      "/projects/sidip/hero2.png",
+      "/projects/sidip/hero3.png",
+      "/projects/sidip/hero4.png"
+    ],
+    videoDemo: ""
   },
   {
     id: "cooprocon",
@@ -238,7 +254,8 @@ export const projects: Project[] = [
       en: "Institutional System / Case Study",
       es: "Sistema Institucional / Estudio de Caso"
     },
-    screenshots: ["/projects/cooprocon/dashboard.png","/projects/cooprocon/hero.png"]
+    screenshots: ["/projects/cooprocon/dashboard.png", "/projects/cooprocon/hero.png"],
+    videoDemo: ""
   },
   {
     id: "pac",
@@ -265,7 +282,8 @@ export const projects: Project[] = [
       en: "Service Architecture / Institutional Legacy",
       es: "Arquitectura de Servicios / Legado Institucional"
     },
-    screenshots: ["/projects/pac/hero.png"]
+    screenshots: ["/projects/pac/hero.png"],
+    videoDemo: ""
   },
   {
     id: "asset-management",
@@ -292,7 +310,8 @@ export const projects: Project[] = [
       en: "Internal System / Symfony Enterprise",
       es: "Sistema Interno / Symfony Enterprise"
     },
-    screenshots: ["/projects/asset-management/dashboard.png"]
+    screenshots: ["/projects/asset-management/dashboard.png"],
+    videoDemo: ""
   },
   {
     id: "del-castillo-y-asoc",
@@ -375,7 +394,7 @@ export const projects: Project[] = [
       en: "Archived Media Portal",
       es: "Portal de Medios Archivo"
     },
-    screenshots: ["/projects/cronistas-sociales/dashboard.jpg"],
+    screenshots: ["./projects/cronistas-sociales/dashboard.jpg"],
     videoDemo: ""
   }
 ];
