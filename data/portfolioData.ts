@@ -184,7 +184,7 @@ export const projects: Project[] = [
       es: "SaaS en Producción / AI-Powered"
     },
     screenshots: ["/projects/medismart/dashboard.png"],
-    videoDemo: ""
+    videoDemo: "/projects/medismart/demo.mp4"
   },
   {
     id: "sidip",
