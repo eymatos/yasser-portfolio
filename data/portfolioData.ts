@@ -16,10 +16,27 @@ export const personalInfo: PersonalInfo = {
   linkedin: "https://www.linkedin.com/in/esleidin-matos",
   github: "https://github.com/eymatos",
   summary: {
-    en: "Senior Systems Engineer with over 18 years of technical experience, specializing in the PHP ecosystem (Symfony/Laravel), Fullstack architecture, and robust web applications. Expert in designing scalable solutions using Domain-Driven Design (DDD), CQRS, Microservices, and proactive incident management.",
-    es: "Ingeniero en Sistemas de Computación con más de 18 años de experiencia técnica, especializado en el ecosistema PHP (Symfony/Laravel), arquitectura Fullstack y aplicaciones web de alta disponibilidad. Experto en diseñar soluciones escalables utilizando Domain-Driven Design (DDD), CQRS, Microservicios y gestión proactiva de incidentes."
+    en: "Senior Computer Systems Engineer with over 18 years of technical experience, specializing in the PHP ecosystem (Symfony/Laravel), Fullstack architecture, and high-availability enterprise applications. Expert in designing scalable solutions using Domain-Driven Design (DDD), CQRS, Microservices, and proactive IT service management.",
+    es: "Ingeniero en Sistemas de Computación Senior con más de 18 años de experiencia técnica, especializado en el ecosistema PHP (Symfony/Laravel), arquitectura Fullstack y aplicaciones empresariales de alta disponibilidad. Experto en diseñar soluciones escalables utilizando Domain-Driven Design (DDD), CQRS, Microservicios y gestión proactiva de servicios de TI."
   },
   experienceYears: 18,
+};
+
+export const coreCompetencies = {
+  en: [
+    "Enterprise Software Architecture (DDD, CQRS, Microservices)",
+    "Incident Management, Escalation & Proactive Error Detection",
+    "IT Service Management (ITIL framework & SOP Development)",
+    "High-Availability Infrastructure & System Monitoring (Nagios, Zabbix)",
+    "Full-Stack Web Development & Modern API Integration"
+  ],
+  es: [
+    "Arquitectura de Software Empresarial (DDD, CQRS, Microservicios)",
+    "Gestión de Incidentes, Escalamiento y Detección Proactiva de Errores",
+    "Gestión de Servicios de TI (Marco ITIL y Desarrollo de SOPs)",
+    "Infraestructura de Alta Disponibilidad y Monitoreo (Nagios, Zabbix)",
+    "Desarrollo Web Full-Stack e Integración de APIs Modernas"
+  ]
 };
 
 export const experiences: Experience[] = [
