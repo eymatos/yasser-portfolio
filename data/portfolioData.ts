@@ -16,8 +16,8 @@ export const personalInfo: PersonalInfo = {
   linkedin: "https://www.linkedin.com/in/esleidin-matos",
   github: "https://github.com/eymatos",
   summary: {
-    en: "Senior Systems Engineer with over 18 years of technical experience, specializing in the PHP ecosystem (Symfony/Laravel) and Fullstack architecture. Expert in designing robust, scalable solutions using Domain-Driven Design (DDD), CQRS, and Microservices.",
-    es: "Ingeniero en Sistemas con más de 18 años de experiencia técnica, especializado en el ecosistema PHP (Symfony/Laravel) y arquitectura Fullstack. Experto en diseñar soluciones robustas y escalables utilizando Domain-Driven Design (DDD), CQRS y Microservicios."
+    en: "Senior Systems Engineer with over 18 years of technical experience, specializing in the PHP ecosystem (Symfony/Laravel), Fullstack architecture, and robust web applications. Expert in designing scalable solutions using Domain-Driven Design (DDD), CQRS, Microservices, and proactive incident management.",
+    es: "Ingeniero en Sistemas de Computación con más de 18 años de experiencia técnica, especializado en el ecosistema PHP (Symfony/Laravel), arquitectura Fullstack y aplicaciones web de alta disponibilidad. Experto en diseñar soluciones escalables utilizando Domain-Driven Design (DDD), CQRS, Microservicios y gestión proactiva de incidentes."
   },
   experienceYears: 18,
 };
@@ -34,19 +34,19 @@ export const experiences: Experience[] = [
     location: "Santo Domingo, DO",
     description: {
       en: [
-        "Led the design and development of scalable, high-availability institutional applications using PHP (Symfony components & Laravel), ensuring data integrity and system performance.",
-        "Transitioned legacy monolithic systems into a modern Microservices architecture with RESTful APIs, facilitating the integration of SIDIP and PAC platforms.",
-        "Standardized development and production environments using Docker, optimizing deployments via automated CI/CD pipelines.",
-        "Managed advanced relational databases (MySQL/SQL Server) and proactive monitoring ensuring 24/7 availability."
+        "Led the design, development, and deployment of scalable, high-availability institutional applications using PHP (Symfony components & Laravel), Python, and modern web technologies, ensuring data integrity and system performance.",
+        "Transitioned legacy monolithic systems into a modern Microservices architecture with RESTful APIs, facilitating the integration of high-impact platforms like SIDIP and PAC.",
+        "Standardized development and production environments using Docker, MySQL, PostgreSQL, and automated CI/CD pipelines to guarantee 24/7 operational continuity.",
+        "Managed advanced relational databases and implemented proactive system monitoring and incident management protocols, optimizing IT service availability."
       ],
       es: [
-        "Lideré el diseño y desarrollo de aplicaciones institucionales escalables de alta disponibilidad utilizando PHP (componentes Symfony y Laravel), garantizando la integridad de datos y el rendimiento del sistema.",
-        "Transicioné sistemas monolíticos heredados hacia una arquitectura moderna de microservicios con APIs RESTful, facilitando la integración de las plataformas SIDIP y PAC.",
-        "Estandaricé los entornos de desarrollo y producción utilizando Docker, optimizando los despliegues mediante pipelines CI/CD automatizados.",
-        "Administré bases de datos relacionales avanzadas (MySQL/SQL Server) y monitoreo proactivo asegurando disponibilidad 24/7."
+        "Lideré el diseño, desarrollo y despliegue de aplicaciones institucionales escalables de alta disponibilidad utilizando PHP (componentes Symfony y Laravel), Python y tecnologías web modernas, garantizando la integridad de datos y el rendimiento del sistema.",
+        "Transicioné sistemas monolíticos heredados hacia una arquitectura moderna de microservicios con APIs RESTful, facilitando la integración de plataformas de alto impacto como SIDIP y PAC.",
+        "Estandaricé los entornos de desarrollo y producción utilizando Docker, MySQL, PostgreSQL y pipelines CI/CD automatizados para garantizar la continuidad operativa 24/7.",
+        "Administré bases de datos relacionales avanzadas e implementé protocolos de monitoreo proactivo del sistema y gestión de incidentes, optimizando la disponibilidad del servicio de TI."
       ]
     },
-    skills: ["PHP 8.x", "Symfony", "Laravel", "Microservices", "Docker", "MySQL", "CI/CD", "AWS"]
+    skills: ["PHP 8.x", "Symfony", "Laravel", "Python", "Microservices", "Docker", "MySQL", "PostgreSQL", "CI/CD", "AWS"]
   },
   {
     id: "jh-auto",
@@ -59,17 +59,40 @@ export const experiences: Experience[] = [
     location: "Bronx, NY (Remote/Hybrid)",
     description: {
       en: [
-        "Developed and managed e-commerce platforms and custom inventory systems using PHP, aligning with high-volume commercial needs.",
-        "Integrated third-party payment gateways/APIs and optimized User Experience (UX) for commercial web applications.",
-        "Managed Linux servers and database performance for high-traffic commercial environments."
+        "Developed and managed e-commerce platforms and custom inventory systems using PHP, JavaScript, and MySQL, aligning with high-volume commercial needs.",
+        "Integrated third-party payment gateways, APIs, and optimized User Experience (UX) alongside robust backend database management.",
+        "Managed Linux servers, database performance, and technical troubleshooting for high-traffic commercial environments."
       ],
       es: [
-        "Desarrollé y administré plataformas de comercio electrónico y sistemas de inventario personalizados utilizando PHP, adaptados a necesidades comerciales de alto volumen.",
-        "Integré pasarelas de pago y APIs de terceros, optimizando la Experiencia de Usuario (UX) para aplicaciones web comerciales.",
-        "Gestioné servidores Linux y el rendimiento de bases de datos para entornos comerciales de alto tráfico."
+        "Desarrollé y administré plataformas de comercio electrónico y sistemas de inventario personalizados utilizando PHP, JavaScript y MySQL, adaptados a necesidades comerciales de alto volumen.",
+        "Integré pasarelas de pago y APIs de terceros, optimizando la Experiencia de Usuario (UX) junto con una gestión robusta de bases de datos backend.",
+        "Gestioné servidores Linux, el rendimiento de bases de datos y la resolución de incidencias técnicas para entornos comerciales de alto tráfico."
       ]
     },
-    skills: ["PHP", "JavaScript", "MySQL", "Linux Server Administration", "E-commerce"]
+    skills: ["PHP", "JavaScript", "MySQL", "Linux Server Administration", "E-commerce", "Bootstrap"]
+  },
+  {
+    id: "first-lady",
+    company: "First Lady's Office (Despacho de la Primera Dama)",
+    role: {
+      en: "Web Master",
+      es: "Web Master"
+    },
+    period: "June 2006 – February 2009",
+    location: "Santo Domingo, DO",
+    description: {
+      en: [
+        "Managed the institutional portal, including daily news and event publication, media editing, and web updates to support public communications.",
+        "Ensured site stability and security by monitoring performance, identifying potential technical issues, and resolving incidents promptly.",
+        "Developed procedures and standards for content management, standardizing updates and significantly reducing system downtime."
+      ],
+      es: [
+        "Administré el portal institucional, incluyendo la publicación diaria de noticias y eventos, edición de contenidos multimedia y actualizaciones web para respaldar las comunicaciones públicas.",
+        "Garanticé la estabilidad y seguridad del sitio mediante el monitoreo de rendimiento, identificación de posibles problemas técnicos y resolución rápida de incidencias.",
+        "Desarrollé procedimientos y estándares para la gestión de contenidos, estandarizando las actualizaciones y reduciendo significativamente el tiempo de inactividad del sistema."
+      ]
+    },
+    skills: ["PHP", "HTML5", "CSS3", "JavaScript", "Web Administration", "Content Management Systems"]
   }
 ];
 
