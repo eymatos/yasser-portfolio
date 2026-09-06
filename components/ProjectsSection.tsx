@@ -3,7 +3,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/data/portfolioData";
 import { Terminal, Layers, ShieldCheck, Video, Image as ImageIcon, Maximize2, X, ChevronLeft, ChevronRight, Play } from "lucide-react";
-import Image from "next/image";
 
 interface ProjectsSectionProps {
   lang: 'en' | 'es';
@@ -145,11 +144,9 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
                         })}
                       >
                         {currentMedia.type === 'image' ? (
-                          <Image 
+                          <img 
                             src={currentMedia.url} 
                             alt={`${project.title[lang]} - Media ${currentIdx + 1}`}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-cover object-top w-full h-full hover:scale-105 transition-transform duration-500"
                           />
                         ) : (
@@ -265,13 +262,11 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
               onClick={(e) => e.stopPropagation()}
             >
               {lightboxData.mediaList[lightboxData.currentIndex]?.type === 'image' ? (
-                <div className="relative w-full h-full">
-                  <Image 
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <img 
                     src={lightboxData.mediaList[lightboxData.currentIndex].url} 
                     alt="Vista ampliada del sistema"
-                    fill
-                    sizes="100vw"
-                    className="object-contain"
+                    className="max-h-full max-w-full object-contain rounded-lg"
                   />
                 </div>
               ) : (
