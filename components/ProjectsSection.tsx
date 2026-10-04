@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects, recognitions } from "@/data/portfolioData";
-import { Terminal, Layers, ShieldCheck, Video, Image as ImageIcon, Maximize2, X, ChevronLeft, ChevronRight, Play, Award, Globe, Newspaper } from "lucide-react";
+import { Terminal, Layers, ShieldCheck, Video, Image as ImageIcon, Maximize2, X, ChevronLeft, ChevronRight, Play, Award, Globe } from "lucide-react";
 import Image from "next/image";
 
 interface ProjectsSectionProps {
@@ -239,9 +239,9 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
           })}
         </div>
 
-        {/* ---------------------------------------------------- */}
-        {/* NUEVA SECCIÓN: Impacto Institucional, Cumbres y Medios */}
-        {/* ---------------------------------------------------- */}
+        {/* ------------------------------------------------------------------------- */}
+        {/* SECCIÓN: Cumbres Internacionales, Reconocimientos y Apariciones en Prensa */}
+        {/* ------------------------------------------------------------------------- */}
         <div className="mt-20 pt-16 border-t border-slate-900">
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-900/50 text-emerald-400 text-xs font-mono font-semibold mb-3">
@@ -253,45 +253,85 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
             </h3>
             <p className="text-slate-400 max-w-xl mx-auto text-sm">
               {lang === 'es'
-                ? 'Coordinación tecnológica y representación en foros multilaterales globales (FTC Washington, ONU Ginebra) y logros institucionales.'
-                : 'Technological coordination and representation in global multilateral forums (FTC Washington, UN Geneva) and institutional milestones.'}
+                ? 'Coordinación tecnológica, apariciones en medios masivos y representación en foros multilaterales globales.'
+                : 'Technological coordination, mass media appearances, and representation in global multilateral forums.'}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {recognitions.map((item, rIdx) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: rIdx * 0.1 }}
-                className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700 transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="p-2.5 rounded-lg bg-blue-950/80 border border-blue-900/50 text-blue-400">
-                      <Award className="w-5 h-5" />
-                    </span>
-                    <span className="text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">
-                      {item.date}
-                    </span>
+            {recognitions.map((item, rIdx) => {
+              const hasItemMedia = Boolean(item.image || item.videoUrl);
+              const mediaUrl = item.image || item.videoUrl || "";
+              const mediaType = item.videoUrl ? 'video' : 'image';
+
+              return (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: rIdx * 0.1 }}
+                  className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700 transition-all flex flex-col justify-between group"
+                >
+                  <div>
+                    {/* Previsualización Multimedia si existe */}
+                    {hasItemMedia && (
+                      <div 
+                        className="relative w-full h-44 mb-4 rounded-lg bg-slate-950 overflow-hidden cursor-pointer group/media border border-slate-800"
+                        onClick={() => setLightboxData({
+                          isOpen: true,
+                          mediaList: [{ type: mediaType, url: mediaUrl }],
+                          currentIndex: 0
+                        })}
+                      >
+                        {mediaType === 'image' ? (
+                          <Image 
+                            src={mediaUrl} 
+                            alt={item.title[lang]}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            className="object-cover group-hover/media:scale-105 transition-transform duration-500"
+                          />
+                        ) : (
+                          <div className="relative w-full h-full flex items-center justify-center bg-black">
+                            <video src={mediaUrl} className="w-full h-full object-cover opacity-75" />
+                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                              <div className="bg-blue-600 text-white p-3 rounded-full shadow-lg group-hover/media:scale-110 transition-transform">
+                                <Play className="w-5 h-5 fill-current" />
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/media:opacity-100 transition-opacity flex items-center justify-center gap-1 text-white text-xs font-mono">
+                          <Maximize2 className="w-3.5 h-3.5" /> {lang === 'es' ? 'Ampliar multimedia' : 'Expand media'}
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="p-2.5 rounded-lg bg-blue-950/80 border border-blue-900/50 text-blue-400">
+                        <Award className="w-5 h-5" />
+                      </span>
+                      <span className="text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">
+                        {item.date}
+                      </span>
+                    </div>
+
+                    <h4 className="text-lg font-bold text-white mb-2">
+                      {item.title[lang]}
+                    </h4>
+
+                    <p className="text-xs font-mono text-blue-400 mb-3">
+                      {item.organization[lang]} {item.location && <span className="text-slate-400">({item.location})</span>}
+                    </p>
+
+                    <p className="text-slate-300 text-xs leading-relaxed">
+                      {item.description[lang]}
+                    </p>
                   </div>
-
-                  <h4 className="text-lg font-bold text-white mb-2">
-                    {item.title[lang]}
-                  </h4>
-
-                  <p className="text-xs font-mono text-blue-400 mb-3">
-                    {item.organization[lang]} {item.location && <span className="text-slate-400">({item.location})</span>}
-                  </p>
-
-                  <p className="text-slate-300 text-xs leading-relaxed">
-                    {item.description[lang]}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
@@ -324,7 +364,7 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
                 <div className="relative w-full h-full">
                   <Image 
                     src={lightboxData.mediaList[lightboxData.currentIndex].url} 
-                    alt="Vista ampliada del sistema"
+                    alt="Vista ampliada"
                     fill
                     sizes="100vw"
                     className="object-contain"
