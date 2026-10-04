@@ -53,6 +53,7 @@ export const experiences: Experience[] = [
       en: [
         "Direct institutional enterprise IT strategy, digital infrastructure, and core software solutions, leading a specialized cross-functional team of 9 technical experts (Full Stack, Frontend, Backend, DB Manager, DevOps, Networking, QA) to maintain 99.9% uptime across core services.",
         "Architected and deployed scalable full-stack applications and microservices using PHP (Symfony/Laravel) and Python, improving transaction throughput and system responsiveness by 40%.",
+        "Managed enterprise ERP and institutional workflows, integrating principles from Ellucian Banner (Student, Finance, and HR/Payroll modules) to streamline administrative processes and multi-tier operational data.",
         "Managed high-availability relational databases (PostgreSQL, MySQL) and orchestrated cloud-native CI/CD pipelines on AWS, accelerating feature deployment cycles by 50% while upholding stringent security and reliability standards.",
         "Spearheaded AI-driven automation tools using LLMs and automated scripts to streamline high-volume records classification and financial reporting workflows, reducing manual processing time by over 60%.",
         "General Coordinator for the ICPEN Presidency technical team (2025-2026), leading IT governance and institutional systems deployment across global multilateral summits, including FTC Headquarters (Washington, DC), UN Palais des Nations (Geneva), and international forums in Argentina, Uruguay, Colombia, Mexico, and El Salvador."
@@ -60,12 +61,13 @@ export const experiences: Experience[] = [
       es: [
         "Dirijo la estrategia de TI empresarial institucional, la infraestructura digital y las soluciones de software principales, liderando un equipo técnico multidisciplinario de 9 expertos para mantener un 99.9% de disponibilidad en servicios críticos.",
         "Diseñé y desplegué aplicaciones full-stack escalables y microservicios utilizando PHP (Symfony/Laravel) y Python, mejorando el rendimiento de transacciones y la capacidad de respuesta del sistema en un 40%.",
+        "Administré ERPs empresariales y flujos institucionales, integrando principios de Ellucian Banner (módulos de Finanzas, Estudiantes y RRHH/Nómina) para optimizar procesos administrativos y datos operativos multitanda.",
         "Administré bases de datos relacionales de alta disponibilidad (PostgreSQL, MySQL) y orquesté pipelines CI/CD nativos de la nube en AWS, acelerando los ciclos de despliegue en un 50% bajo estrictos estándares de seguridad.",
         "Lideré herramientas de automatización impulsadas por IA mediante LLMs y scripts para optimizar la clasificación de registros de alto volumen y flujos financieros, reduciendo el tiempo de procesamiento manual en más del 60%.",
         "Coordinador General del equipo técnico de la Presidencia de ICPEN (2025-2026), liderando la gobernanza de TI y despliegues tecnológicos en cumbres globales multilaterales, incluyendo la sede de la FTC (Washington, DC), el Palacio de las Naciones de la ONU (Ginebra), y foros internacionales en Argentina, Uruguay, Colombia, México y El Salvador."
       ]
     },
-    skills: ["PHP 8.x", "Symfony", "Laravel", "Python", "Microservices", "Docker", "PostgreSQL", "MySQL", "AWS", "CI/CD", "AI Automation", "Ellucian Banner Principles"]
+    skills: ["PHP 8.x", "Symfony", "Laravel", "Python", "Ellucian Banner", "Microservices", "Docker", "PostgreSQL", "MySQL", "AWS", "CI/CD", "AI Automation"]
   },
   {
     id: "jh-auto",
