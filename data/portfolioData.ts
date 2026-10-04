@@ -123,6 +123,24 @@ export const experiences: Experience[] = [
 
 export const recognitions: Recognition[] = [
   {
+    id: "press-medismart-launch",
+    title: {
+      en: "Media Coverage: Launch of MediSmart RD (AI Clinical Platform)",
+      es: "Cobertura de Prensa: Lanzamiento de MediSmart RD (Plataforma Clínica con IA)"
+    },
+    organization: {
+      en: "Últimas Noticias Digital",
+      es: "Últimas Noticias Digital"
+    },
+    date: "January 2026",
+    location: "Santo Domingo, DO",
+    description: {
+      en: "Featured media coverage detailing the official launch of MediSmart RD, highlighting its advanced AI medical engine, personalized dosage calculation, and digital prescriptions.",
+      es: "Cobertura mediática destacando el lanzamiento oficial de MediSmart RD, resaltando su motor médico de IA avanzado, cálculo de dosis personalizadas y recetas digitales."
+    },
+    image: "/press/medismart.jpg"
+  },
+  {
     id: "icpen-presentation",
     title: {
       en: "ICPEN SIDIP System Presentation",
