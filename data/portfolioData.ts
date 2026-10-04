@@ -1,10 +1,10 @@
-import { PersonalInfo, Project, Experience } from '@/types/portfolio';
+import { PersonalInfo, Project, Experience, Recognition } from '@/types/portfolio';
 
 export const personalInfo: PersonalInfo = {
   name: "Esleidin Yasser Matos Lara",
   title: {
-    en: "Senior PHP Developer & Software Architect",
-    es: "Desarrollador PHP Senior y Arquitecto de Software"
+    en: "Technology Director & Enterprise Systems Architect",
+    es: "Director de Tecnología y Arquitecto de Sistemas Empresariales"
   },
   location: "Santo Domingo, DO",
   relocationTarget: {
@@ -16,26 +16,26 @@ export const personalInfo: PersonalInfo = {
   linkedin: "https://www.linkedin.com/in/esleidin-matos",
   github: "https://github.com/eymatos",
   summary: {
-    en: "Senior Computer Systems Engineer with over 18 years of technical experience, specializing in the PHP ecosystem (Symfony/Laravel), Fullstack architecture, and high-availability enterprise applications. Expert in designing scalable solutions using Domain-Driven Design (DDD), CQRS, Microservices, and proactive IT service management.",
-    es: "Ingeniero en Sistemas de Computación Senior con más de 18 años de experiencia técnica, especializado en el ecosistema PHP (Symfony/Laravel), arquitectura Fullstack y aplicaciones empresariales de alta disponibilidad. Experto en diseñar soluciones escalables utilizando Domain-Driven Design (DDD), CQRS, Microservicios y gestión proactiva de servicios de TI."
+    en: "Accomplished Technology Director and Enterprise Systems Engineer with over 18 years of experience spearheading digital transformation, enterprise resource planning (ERP) governance, and full-stack software engineering. Expert in modernizing mission-critical architectures, Ellucian Banner workflows, multi-tier payroll administration (Workday, Gusto), secure APIs, and AI-driven automation workflows.",
+    es: "Director de Tecnología e Ingeniero de Sistemas Empresariales con más de 18 años de experiencia liderando la transformación digital, la gobernanza de planificación de recursos empresariales (ERP) y la ingeniería de software full-stack. Experto en modernizar arquitecturas críticas, flujos de Ellucian Banner, administración de nóminas multi-nivel (Workday, Gusto), APIs seguras y flujos de automatización con IA."
   },
   experienceYears: 18,
 };
 
 export const coreCompetencies = {
   en: [
-    "Enterprise Software Architecture (DDD, CQRS, Microservices)",
-    "Incident Management, Escalation & Proactive Error Detection",
-    "IT Service Management (ITIL framework & SOP Development)",
-    "High-Availability Infrastructure & System Monitoring (Nagios, Zabbix)",
-    "Full-Stack Web Development & Modern API Integration"
+    "Enterprise Systems & ERP (Ellucian Banner, Workday, Gusto, Multi-tier Payroll)",
+    "Full-Stack Software Engineering (PHP/Laravel/Symfony, Python, FastAPI, Django)",
+    "Advanced Data Architecture (PostgreSQL, MySQL, Database Tuning, ETL Workflows)",
+    "Applied AI & Automation Engineering (LLMs, Cursor, Claude Code, Vibe Coding)",
+    "Strategic Governance & International Summit Technology Coordination (FTC Washington, UN Geneva)"
   ],
   es: [
-    "Arquitectura de Software Empresarial (DDD, CQRS, Microservicios)",
-    "Gestión de Incidentes, Escalamiento y Detección Proactiva de Errores",
-    "Gestión de Servicios de TI (Marco ITIL y Desarrollo de SOPs)",
-    "Infraestructura de Alta Disponibilidad y Monitoreo (Nagios, Zabbix)",
-    "Desarrollo Web Full-Stack e Integración de APIs Modernas"
+    "Sistemas Empresariales y ERP (Ellucian Banner, Workday, Gusto, Nóminas Multitanda)",
+    "Ingeniería de Software Full-Stack (PHP/Laravel/Symfony, Python, FastAPI, Django)",
+    "Arquitectura de Datos Avanzada (PostgreSQL, MySQL, Tuning, Flujos ETL)",
+    "Ingeniería de IA Aplicada y Automatización (LLMs, Cursor, Claude Code, Vibe Coding)",
+    "Gobernanza Estratégica y Coordinación Tecnológica en Cumbres Internacionales (FTC Washington, ONU Ginebra)"
   ]
 };
 
@@ -44,26 +44,28 @@ export const experiences: Experience[] = [
     id: "proconsumidor",
     company: "Instituto Nacional de Protección de los Derechos del Consumidor (ProConsumidor)",
     role: {
-      en: "Director of Technology / Senior PHP Developer",
+      en: "Technology Director / Senior PHP Developer",
       es: "Director de Tecnología / Desarrollador PHP Senior"
     },
     period: "2015 – Present",
-    location: "Santo Domingo, DO",
+    location: "Santo Domingo, DO / International Summits",
     description: {
       en: [
-        "Led the design, development, and deployment of scalable, high-availability institutional applications using PHP (Symfony components & Laravel), Python, and modern web technologies, ensuring data integrity and system performance.",
-        "Transitioned legacy monolithic systems into a modern Microservices architecture with RESTful APIs, facilitating the integration of high-impact platforms like SIDIP and PAC.",
-        "Standardized development and production environments using Docker, MySQL, PostgreSQL, and automated CI/CD pipelines to guarantee 24/7 operational continuity.",
-        "Managed advanced relational databases and implemented proactive system monitoring and incident management protocols, optimizing IT service availability."
+        "Direct institutional enterprise IT strategy, digital infrastructure, and core software solutions, leading a specialized cross-functional team of 9 technical experts (Full Stack, Frontend, Backend, DB Manager, DevOps, Networking, QA) to maintain 99.9% uptime across core services.",
+        "Architected and deployed scalable full-stack applications and microservices using PHP (Symfony/Laravel) and Python, improving transaction throughput and system responsiveness by 40%.",
+        "Managed high-availability relational databases (PostgreSQL, MySQL) and orchestrated cloud-native CI/CD pipelines on AWS, accelerating feature deployment cycles by 50% while upholding stringent security and reliability standards.",
+        "Spearheaded AI-driven automation tools using LLMs and automated scripts to streamline high-volume records classification and financial reporting workflows, reducing manual processing time by over 60%.",
+        "General Coordinator for the ICPEN Presidency technical team (2025-2026), leading IT governance and institutional systems deployment across global multilateral summits, including FTC Headquarters (Washington, DC), UN Palais des Nations (Geneva), and international forums in Argentina, Uruguay, Colombia, Mexico, and El Salvador."
       ],
       es: [
-        "Lideré el diseño, desarrollo y despliegue de aplicaciones institucionales escalables de alta disponibilidad utilizando PHP (componentes Symfony y Laravel), Python y tecnologías web modernas, garantizando la integridad de datos y el rendimiento del sistema.",
-        "Transicioné sistemas monolíticos heredados hacia una arquitectura moderna de microservicios con APIs RESTful, facilitando la integración de plataformas de alto impacto como SIDIP y PAC.",
-        "Estandaricé los entornos de desarrollo y producción utilizando Docker, MySQL, PostgreSQL y pipelines CI/CD automatizados para garantizar la continuidad operativa 24/7.",
-        "Administré bases de datos relacionales avanzadas e implementé protocolos de monitoreo proactivo del sistema y gestión de incidentes, optimizando la disponibilidad del servicio de TI."
+        "Dirijo la estrategia de TI empresarial institucional, la infraestructura digital y las soluciones de software principales, liderando un equipo técnico multidisciplinario de 9 expertos para mantener un 99.9% de disponibilidad en servicios críticos.",
+        "Diseñé y desplegué aplicaciones full-stack escalables y microservicios utilizando PHP (Symfony/Laravel) y Python, mejorando el rendimiento de transacciones y la capacidad de respuesta del sistema en un 40%.",
+        "Administré bases de datos relacionales de alta disponibilidad (PostgreSQL, MySQL) y orquesté pipelines CI/CD nativos de la nube en AWS, acelerando los ciclos de despliegue en un 50% bajo estrictos estándares de seguridad.",
+        "Lideré herramientas de automatización impulsadas por IA mediante LLMs y scripts para optimizar la clasificación de registros de alto volumen y flujos financieros, reduciendo el tiempo de procesamiento manual en más del 60%.",
+        "Coordinador General del equipo técnico de la Presidencia de ICPEN (2025-2026), liderando la gobernanza de TI y despliegues tecnológicos en cumbres globales multilaterales, incluyendo la sede de la FTC (Washington, DC), el Palacio de las Naciones de la ONU (Ginebra), y foros internacionales en Argentina, Uruguay, Colombia, México y El Salvador."
       ]
     },
-    skills: ["PHP 8.x", "Symfony", "Laravel", "Python", "Microservices", "Docker", "MySQL", "PostgreSQL", "CI/CD", "AWS"]
+    skills: ["PHP 8.x", "Symfony", "Laravel", "Python", "Microservices", "Docker", "PostgreSQL", "MySQL", "AWS", "CI/CD", "AI Automation", "Ellucian Banner Principles"]
   },
   {
     id: "jh-auto",
@@ -76,17 +78,21 @@ export const experiences: Experience[] = [
     location: "Bronx, NY (Remote/Hybrid)",
     description: {
       en: [
-        "Developed and managed e-commerce platforms and custom inventory systems using PHP, JavaScript, and MySQL, aligning with high-volume commercial needs.",
-        "Integrated third-party payment gateways, APIs, and optimized User Experience (UX) alongside robust backend database management.",
-        "Managed Linux servers, database performance, and technical troubleshooting for high-traffic commercial environments."
+        "Engineered and maintained high-traffic web applications, inventory management systems, and custom database integrations using PHP, JavaScript, MySQL, and Linux environments.",
+        "Implemented secure data schemas and payment processing gateways ensuring compliance, data protection, and optimized user experience.",
+        "Oversaw comprehensive business operations, multi-tier payroll administration, inventory management, and financial transaction processing, leveraging platforms like Gusto and Workday as lightweight administrative process automations.",
+        "Engineered automated data reconciliation pipelines, eliminating repetitive administrative burdens and reducing transaction discrepancies by 35%.",
+        "Managed operational budgets and led cross-functional staff, aligning operational standards with institutional fiscal goals."
       ],
       es: [
-        "Desarrollé y administré plataformas de comercio electrónico y sistemas de inventario personalizados utilizando PHP, JavaScript y MySQL, adaptados a necesidades comerciales de alto volumen.",
-        "Integré pasarelas de pago y APIs de terceros, optimizando la Experiencia de Usuario (UX) junto con una gestión robusta de bases de datos backend.",
-        "Gestioné servidores Linux, el rendimiento de bases de datos y la resolución de incidencias técnicas para entornos comerciales de alto tráfico."
+        "Diseñé y mantuve aplicaciones web de alto tráfico, sistemas de gestión de inventario e integraciones de bases de datos personalizadas utilizando PHP, JavaScript, MySQL y entornos Linux.",
+        "Implementé esquemas de datos seguros y pasarelas de pago garantizando cumplimiento, protección de datos y una experiencia de usuario optimizada.",
+        "Supervisé operaciones comerciales integrales, administración de nóminas multi-nivel, gestión de inventario y procesamiento de transacciones financieras, aprovechando plataformas como Gusto y Workday para automatizaciones administrativas ligeras.",
+        "Diseñé pipelines automatizados de conciliación de datos, eliminando cargas administrativas repetitivas y reduciendo discrepancias de transacciones en un 35%.",
+        "Administré presupuestos operativos y lideré personal multidisciplinario, alineando los estándares operativos con los objetivos fiscales institucionales."
       ]
     },
-    skills: ["PHP", "JavaScript", "MySQL", "Linux Server Administration", "E-commerce", "Bootstrap"]
+    skills: ["PHP", "JavaScript", "MySQL", "Linux Server Administration", "Gusto", "Workday", "Payroll Governance", "E-commerce", "Bootstrap"]
   },
   {
     id: "first-lady",
@@ -99,17 +105,182 @@ export const experiences: Experience[] = [
     location: "Santo Domingo, DO",
     description: {
       en: [
-        "Managed the institutional portal, including daily news and event publication, media editing, and web updates to support public communications.",
+        "Directed institutional web platforms and content delivery systems leveraging PHP, HTML5, CSS3, and JavaScript, ensuring robust uptime and public accessibility.",
         "Ensured site stability and security by monitoring performance, identifying potential technical issues, and resolving incidents promptly.",
         "Developed procedures and standards for content management, standardizing updates and significantly reducing system downtime."
       ],
       es: [
-        "Administré el portal institucional, incluyendo la publicación diaria de noticias y eventos, edición de contenidos multimedia y actualizaciones web para respaldar las comunicaciones públicas.",
-        "Garanticé la estabilidad y seguridad del sitio mediante el monitoreo de rendimiento, identificación de posibles problemas técnicos y resolución rápida de incidencias.",
-        "Desarrollé procedimientos y estándares para la gestión de contenidos, estandarizando las actualizaciones y reduciendo significativamente el tiempo de inactividad del sistema."
+        "Dirigí plataformas web institucionales y sistemas de entrega de contenido aprovechando PHP, HTML5, CSS3 y JavaScript, asegurando una alta disponibilidad y accesibilidad pública.",
+        "Garanticé la estabilidad y seguridad del sitio mediante el monitoreo de rendimiento, identificación de problemas técnicos y resolución rápida de incidencias.",
+        "Desarrollé procedimientos y estándares para la gestión de contenidos, estandarizando actualizaciones y reduciendo significativamente el tiempo de inactividad."
       ]
     },
     skills: ["PHP", "HTML5", "CSS3", "JavaScript", "Web Administration", "Content Management Systems"]
+  }
+];
+
+export const recognitions: Recognition[] = [
+  {
+    id: "icpen-presentation",
+    title: {
+      en: "ICPEN SIDIP System Presentation",
+      es: "Presentación del Sistema SIDIP en ICPEN"
+    },
+    organization: {
+      en: "ICPEN Multilateral Summit",
+      es: "Cumbre Multilateral ICPEN"
+    },
+    date: "2025 - 2026",
+    location: "International Forums",
+    description: {
+      en: "Video presentation and technical briefing of the Dominican Price Information System (SIDIP) before international consumer protection delegations.",
+      es: "Presentación en video e informe técnico del Sistema Dominicano de Información de Precios (SIDIP) ante delegaciones internacionales de protección al consumidor."
+    },
+    videoUrl: "/press/ICPEN SIDIP PRESENTATION.mp4"
+  },
+  {
+    id: "icpen-presidency",
+    title: {
+      en: "ICPEN Presidency Reports & Coordination",
+      es: "Informes de Presidencia y Coordinación ICPEN"
+    },
+    organization: {
+      en: "ICPEN Executive Board",
+      es: "Directiva Ejecutiva ICPEN"
+    },
+    date: "2025 - 2026",
+    location: "Global Delegations",
+    description: {
+      en: "Official intervention delivering executive presidency reports and overseeing IT governance across global multilateral sessions.",
+      es: "Intervención oficial entregando informes de la presidencia ejecutiva y supervisando la gobernanza de TI en sesiones multilaterales globales."
+    },
+    image: "/press/ICPEN.jpg"
+  },
+  {
+    id: "onu-unctad-1",
+    title: {
+      en: "UNCTAD - UN Multilateral Participation (Session I)",
+      es: "Participación Multilateral UNCTAD - ONU (Sesión I)"
+    },
+    organization: {
+      en: "United Nations (UNCTAD)",
+      es: "Organización de las Naciones Unidas (UNCTAD)"
+    },
+    date: "2025 - 2026",
+    location: "Palais des Nations, Geneva",
+    description: {
+      en: "High-level institutional representation and technical collaboration at United Nations Conference on Trade and Development forums.",
+      es: "Representación institucional de alto nivel y colaboración técnica en los foros de la Conferencia de las Naciones Unidas sobre Comercio y Desarrollo."
+    },
+    image: "/press/ONU.jpg"
+  },
+  {
+    id: "onu-unctad-2",
+    title: {
+      en: "UNCTAD - UN Multilateral Participation (Session II)",
+      es: "Participación Multilateral UNCTAD - ONU (Sesión II)"
+    },
+    organization: {
+      en: "United Nations (UNCTAD)",
+      es: "Organización de las Naciones Unidas (UNCTAD)"
+    },
+    date: "2025 - 2026",
+    location: "Palais des Nations, Geneva",
+    description: {
+      en: "Continuation of multilateral engagements focusing on digital consumer empowerment, cross-border cooperation, and data governance standards.",
+      es: "Continuidad de compromisos multilaterales enfocados en empoderamiento del consumidor digital, cooperación transfronteriza y estándares de gobernanza de datos."
+    },
+    image: "/press/ONU2.jpg"
+  },
+  {
+    id: "press-cdn-sidip3",
+    title: {
+      en: "Press Conference: SIDIP 3.0 National Launch",
+      es: "Rueda de Prensa: Lanzamiento Nacional SIDIP 3.0"
+    },
+    organization: {
+      en: "CDN Media Coverage",
+      es: "Cobertura de Medios CDN"
+    },
+    date: "2025",
+    location: "Santo Domingo, DO",
+    description: {
+      en: "Media broadcast covering the official release of SIDIP 3.0, detailing real-time market price monitoring architecture for citizens.",
+      es: "Transmisión de medios cubriendo el lanzamiento oficial de SIDIP 3.0, detallando la arquitectura de monitoreo de precios de mercado en tiempo real."
+    },
+    image: "/press/CDN.jpg"
+  },
+  {
+    id: "press-hoy-app",
+    title: {
+      en: "Periódico Hoy Interview: New App Launch",
+      es: "Entrevista Periódico Hoy: Lanzamiento de Nueva App"
+    },
+    organization: {
+      en: "Periódico Hoy",
+      es: "Periódico Hoy"
+    },
+    date: "2024 - 2025",
+    location: "Dominican Republic",
+    description: {
+      en: "Featured print and digital interview discussing technological modernization, mobile solutions, and citizen service efficiency.",
+      es: "Entrevista impresa y digital destacada discutiendo la modernización tecnológica, soluciones móviles y la eficiencia en el servicio al ciudadano."
+    },
+    image: "/press/Periodico Hoy.jpg"
+  },
+  {
+    id: "press-rueda-pac",
+    title: {
+      en: "Press Conference: Agile Assistance Platform (PAC)",
+      es: "Rueda de Prensa: Plataforma Ágil de Asistencia (PAC)"
+    },
+    organization: {
+      en: "National Media Press Briefing",
+      es: "Rueda de Prensa a Medios Nacionales"
+    },
+    date: "2024 - 2025",
+    location: "Santo Domingo, DO",
+    description: {
+      en: "Video broadcast and press conference introducing the automated claims and incident response architecture for consumer rights.",
+      es: "Transmisión en video y rueda de prensa presentando la arquitectura automatizada de reclamaciones y respuesta a incidencias para los derechos del consumidor."
+    },
+    videoUrl: "/press/Rueda de prensa.mp4"
+  },
+  {
+    id: "press-sin-coverage",
+    title: {
+      en: "Noticias SIN Broadcast Coverage",
+      es: "Cobertura de Emisión de Noticias SIN"
+    },
+    organization: {
+      en: "Noticias SIN",
+      es: "Noticias SIN"
+    },
+    date: "2024 - 2025",
+    location: "Dominican Republic",
+    description: {
+      en: "Prime-time television news coverage highlighting the implementation and social impact of institutional software platforms.",
+      es: "Cobertura de noticias en televisión estelar destacando la implementación y el impacto social de las plataformas de software institucional."
+    },
+    image: "/press/SIN.jpg"
+  },
+  {
+    id: "institutional-bulletin",
+    title: {
+      en: "Institutional Bulletin Feature: Pro Consumidor Leadership",
+      es: "Publicación en Boletin Institucional: Liderazgo en Pro Consumidor"
+    },
+    organization: {
+      en: "Pro Consumidor Official Publication",
+      es: "Publicación Oficial Pro Consumidor"
+    },
+    date: "2025",
+    location: "Santo Domingo, DO",
+    description: {
+      en: "Special institutional magazine publication detailing technical management, digital transformation milestones, and departmental excellence.",
+      es: "Publicación especial de revista institucional detallando la gestión técnica, hitos de transformación digital y la excelencia departamental."
+    },
+    image: "/press/Boletin Institucional.jpeg"
   }
 ];
 

@@ -8,6 +8,17 @@ export interface BilingualList {
   es: string[];
 }
 
+export interface Recognition {
+  id: string;
+  title: BilingualText;
+  organization: BilingualText;
+  date: string;
+  description: BilingualText;
+  location?: string;
+  image?: string;
+  videoUrl?: string;
+}
+
 export interface Project {
   id: string;
   title: BilingualText;

@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { projects } from "@/data/portfolioData";
-import { Terminal, Layers, ShieldCheck, Video, Image as ImageIcon, Maximize2, X, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { projects, recognitions } from "@/data/portfolioData";
+import { Terminal, Layers, ShieldCheck, Video, Image as ImageIcon, Maximize2, X, ChevronLeft, ChevronRight, Play, Award, Globe, Newspaper } from "lucide-react";
 import Image from "next/image";
 
 interface ProjectsSectionProps {
@@ -73,7 +73,7 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
     <section id="projects" className="py-24 px-6 bg-slate-950 relative border-t border-slate-900">
       <div className="max-w-6xl mx-auto">
         
-        {/* Cabecera de la Sección */}
+        {/* Cabecera de la Sección de Proyectos */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
             {lang === 'es' ? 'Proyectos Clave y Sistemas' : 'Key Projects & Systems'}
@@ -86,7 +86,7 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
         </div>
 
         {/* Grid de Proyectos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {projects.map((project, index) => {
             const mediaList = getProjectMediaList(project);
             const hasMedia = mediaList.length > 0;
@@ -237,6 +237,62 @@ export default function ProjectsSection({ lang }: ProjectsSectionProps) {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* ---------------------------------------------------- */}
+        {/* NUEVA SECCIÓN: Impacto Institucional, Cumbres y Medios */}
+        {/* ---------------------------------------------------- */}
+        <div className="mt-20 pt-16 border-t border-slate-900">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-900/50 text-emerald-400 text-xs font-mono font-semibold mb-3">
+              <Globe className="w-3.5 h-3.5" />
+              {lang === 'es' ? 'Liderazgo Global e Institucional' : 'Global & Institutional Leadership'}
+            </span>
+            <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
+              {lang === 'es' ? 'Cumbres Internacionales y Reconocimientos' : 'International Summits & Recognitions'}
+            </h3>
+            <p className="text-slate-400 max-w-xl mx-auto text-sm">
+              {lang === 'es'
+                ? 'Coordinación tecnológica y representación en foros multilaterales globales (FTC Washington, ONU Ginebra) y logros institucionales.'
+                : 'Technological coordination and representation in global multilateral forums (FTC Washington, UN Geneva) and institutional milestones.'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {recognitions.map((item, rIdx) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: rIdx * 0.1 }}
+                className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="p-2.5 rounded-lg bg-blue-950/80 border border-blue-900/50 text-blue-400">
+                      <Award className="w-5 h-5" />
+                    </span>
+                    <span className="text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">
+                      {item.date}
+                    </span>
+                  </div>
+
+                  <h4 className="text-lg font-bold text-white mb-2">
+                    {item.title[lang]}
+                  </h4>
+
+                  <p className="text-xs font-mono text-blue-400 mb-3">
+                    {item.organization[lang]} {item.location && <span className="text-slate-400">({item.location})</span>}
+                  </p>
+
+                  <p className="text-slate-300 text-xs leading-relaxed">
+                    {item.description[lang]}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
       </div>
