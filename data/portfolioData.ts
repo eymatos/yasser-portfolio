@@ -306,6 +306,38 @@ export const recognitions: Recognition[] = [
 
 export const projects: Project[] = [
   {
+    id: "stickmen-worms-battle",
+    title: {
+      en: "Stickmen Worms Battle (2D Tactical Physics Game)",
+      es: "Stickmen Worms Battle (Juego Táctico de Físicas 2D)"
+    },
+    role: {
+      en: "Lead Software & Physics Engine Developer",
+      es: "Desarrollador Líder de Software y Motor de Físicas"
+    },
+    description: {
+      en: "Advanced 2D turn-based tactical physics game executed natively in the browser with pixel-by-pixel terrain destruction, P2P multiplayer, and heuristic AI.",
+      es: "Juego táctico de físicas por turnos en 2D ejecutado nativamente en el navegador con destrucción de terreno píxel a píxel, multijugador P2P e IA heurística."
+    },
+    longDescription: {
+      en: "High-performance browser-based tactical game built without heavy commercial engines. Features pixel-by-pixel volumetric terrain destruction, continuous collision detection (CCD), WebRTC multiplayer sync, and procedural cinematic visual effects.",
+      es: "Juego táctico basado en navegador de alto rendimiento construido sin motores comerciales pesados. Cuenta con destrucción de terreno volumétrica píxel a píxel, detección continua de colisiones (CCD), sincronización multijugador WebRTC y efectos visuales cinemáticos procedurales."
+    },
+    techStack: ["TypeScript", "HTML5 Canvas 2D API", "Vite 5", "WebRTC P2P", "Web Audio API", "Tailwind CSS"],
+    category: "Fullstack",
+    featured: true,
+    link: "https://stick-battle.vercel.app",
+    github: "https://github.com/eymatos",
+    status: {
+      en: "Live Production / Physics Engine",
+      es: "En Producción / Motor de Físicas"
+    },
+    screenshots: [
+      "/projects/stickmen-battle/captura1.jpg",
+      "/projects/stickmen-battle/captura2.jpg"
+    ]
+  },
+  {
     id: "jurisai",
     title: {
       en: "JurisAI (Intelligent Legal Assistant)",
