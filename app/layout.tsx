@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Esleidin Yasser Matos Lara | Senior PHP Developer & Software Architect",
-  description: "Portafolio profesional bilingüe de Esleidin Yasser Matos Lara, Ingeniero en Sistemas con más de 18 años de experiencia.",
+  title: "Esleidin Yasser Matos Lara | Technology Director & Software Architect",
+  description: "Portafolio profesional bilingüe de Esleidin Yasser Matos Lara, Director de Tecnología e Ingeniero en Sistemas con más de 18 años de experiencia.",
 };
 
 export default function RootLayout({
@@ -26,9 +26,9 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${jakarta.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col font-sans bg-slate-950 text-slate-100" suppressHydrationWarning>
         {children}
         <Analytics />
       </body>
