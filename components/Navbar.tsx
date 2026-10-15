@@ -19,7 +19,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#" className="text-xl font-black tracking-wider text-white flex items-center gap-2">
           <span className="text-blue-500 font-mono">&lt;</span>
-          YASSER.DEV
+          YASSERMATOS.COM
           <span className="text-blue-500 font-mono">/&gt;</span>
         </a>
 
