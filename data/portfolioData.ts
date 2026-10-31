@@ -305,6 +305,39 @@ export const recognitions: Recognition[] = [
 ];
 
 export const projects: Project[] = [
+    {
+    id: "diamante-criollo",
+    title: {
+      en: "Diamante Criollo (3D Dominican Baseball Game)",
+      es: "Diamante Criollo (Juego de Béisbol Dominicano en 3D)"
+    },
+    role: {
+      en: "Lead Game Developer & Engine Architect",
+      es: "Desarrollador Líder de Videojuegos y Arquitecto del Motor"
+    },
+    description: {
+      en: "Commercial 3D baseball game inspired by Dominican winter ball, running natively in the browser on a custom WebGL engine, with season mode, online multiplayer and live play-by-play narration.",
+      es: "Videojuego comercial de béisbol en 3D inspirado en la pelota invernal dominicana, que corre nativamente en el navegador sobre un motor WebGL propio, con modo temporada, multijugador en línea y narración en vivo."
+    },
+    longDescription: {
+      en: "Full game built from scratch without commercial engines: a custom WebGL renderer with toon shading, skinned characters with two-bone IK (batting, pitching, diving and sliding animations), and a deterministic baseball simulation that follows official rules (force plays vs. tag plays, tag-ups, infield fly, walk-offs). Includes season mode with standings, Round Robin and Finals, a 'My Player' career mode, instant replays with TV cameras, achievements, an interactive tutorial, and server-authoritative online multiplayer over WebSockets with latency compensation. Audio is procedural (Web Audio API) with a stadium music system, crowd reactions and automatic ducking under the narrator and umpires. Built for monetization: rotating ad billboards fed from a folder, licensed artist songs with on-screen credits, and team logos auto-detected by the server. Impact: runs at 60 fps on mid-range hardware thanks to a dynamic quality governor and single-mesh skinned characters (~440 → ~100 draw calls), backed by an automated test suite of 45 rule, realism and netcode tests.",
+      es: "Juego completo construido desde cero sin motores comerciales: renderizador WebGL propio con toon shading, personajes con esqueleto e IK de dos huesos (animaciones de bateo, lanzamiento, clavados y barridas) y una simulación de béisbol determinista que sigue las reglas oficiales (jugada forzada vs. out por toque, pisa y corre, infield fly, walk-off). Incluye modo temporada con tabla de posiciones, Round Robin y Serie Final, carrera 'Mi Pelotero', repeticiones instantáneas con cámaras de TV, logros, tutorial interactivo y multijugador en línea con servidor autoritativo por WebSockets y compensación de latencia. El audio es procedural (Web Audio API), con música de estadio, reacciones del público y bajada automática del volumen cuando hablan el narrador y los umpires. Diseñado para monetizar: vallas publicitarias rotativas alimentadas desde una carpeta, canciones de artistas con licencia y crédito en pantalla, y escudos de los clubes detectados automáticamente por el servidor. Impacto: corre a 60 fps en equipos de gama media gracias a un regulador dinámico de calidad y personajes en una sola malla (de ~440 a ~100 llamadas de dibujo), respaldado por 45 pruebas automatizadas de reglas, realismo y red."
+    },
+    techStack: ["JavaScript (ES2020)", "WebGL 1/2 (custom engine)", "GLSL Shaders", "Node.js", "WebSockets", "Web Audio API", "Web Speech API", "Gamepad API", "Docker", "Playwright"],
+    category: "Fullstack",
+    featured: true,
+    // link: "https://diamantecriollo.tu-dominio.com",  // cuando lo publiques
+    github: "https://github.com/eymatos",
+    status: {
+      en: "Playable Beta / Commercial Game in Development",
+      es: "Beta Jugable / Juego Comercial en Desarrollo"
+    },
+    screenshots: [
+      "/projects/diamante-criollo/dashboard.png",
+      "/projects/diamante-criollo/hero.png"
+    ],
+    videoDemo: ""
+  },
   {
     id: "stickmen-worms-battle",
     title: {
